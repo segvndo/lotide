@@ -28,9 +28,9 @@ assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false);
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), false);*/
 
 const assertArraysEqual = function(array1, array2) {
-  if (array1.isArray === array2.isArray) {
+  if (array1 === array2) {
     console.log(`Assertion Passed:, ${array1} === ${array2}`);
-  } else if (array1.isArray !== array2.isArray) {
+  } else if (array1 !== array2) {
     console.log(`Assertion Failed:, ${array1} !== ${array2}`);
   }
 };
