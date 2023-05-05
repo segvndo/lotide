@@ -25,3 +25,18 @@ const countLetters = function(str) {
 
 countLetters("Charlie is a good boy");
 console.log(countLetters("Charlie is the best boy"));
+/*{
+  c: 1,
+  h: 2,
+  a: 1,
+  r: 1,
+  l: 1,
+  i: 2,
+  e: 3,
+  ' ': 4,
+  s: 2,
+  t: 2,
+  b: 2,
+  o: 1,
+  y: 1
+}*/
