@@ -36,4 +36,7 @@ assertEqual((findKey({
   "elBulli":   { stars: 3 },
   "Ora":       { stars: 2 },
   "Akelarre":  { stars: 3}
-}), x => x.stars === 3), "Akaleri");
+}), x => x.stars === 3), "Akaleri");.
+
+// Assertion Failed:, Blue Hill !== noma
+// Assertion Failed:, x => x.stars === 3 !== Akaleri
