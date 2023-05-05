@@ -19,15 +19,16 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
-//It should keep going until the callback/predicate returns a truthy value.
-//will keep collecting items from a provided array until the callback provided returns a truthy value.
 //callback should only be provided one value: The item in the array.
 
 const takeUntil = function(array, callback) {
   let results = [];
   for (let i = 0; i < array.length; i++) {
+    //It should keep going until the callback/predicate returns a truthy value.
     if (callback(array[i])) {
+    //will keep collecting items from a provided array until the callback provided returns a truthy value.
       results = array.slice(0, i);
+      //.slice to return back end of array into results arr
       return results;
       //return a "slice of the array with elements taken from the beginning."
     }
@@ -44,3 +45,7 @@ console.log('---');
 const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
 const results2 = takeUntil(data2, x => x === ',');
 console.log(results2);
+
+// [ 1, 2, 5, 7, 2 ]
+// --
+// [ 'I\'ve', 'been', 'to', 'Hollywood' ]
