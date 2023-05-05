@@ -30,7 +30,7 @@ const map = function(array, callback) {
 ;}
 
 const result1 = map(words, word => word[0]);
-assertArraysEqual((result1, [ 'g', 'c', 't', 'm', 't' ]), true);
+assertArraysEqual((result1, [ 'd', 'r', 'u', 'o', 'g' ]), true);
 
 const result2 = map(words, word => word.length)
 assertArraysEqual((result2, [6, 7, 2, 5, 3, 7, 5]), true);
