@@ -8,8 +8,8 @@ const assertEqual = function(actual, expected) {
   }
 };
 // TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
+// assertEqual("Lighthouse Labs", "Bootcamp");
+// assertEqual(1, 1);
 
 const head = function(arr) {
   if (arr.length === 0) {
@@ -20,8 +20,8 @@ const head = function(arr) {
 };
 
 //TEST CODE
-assertEqual(head([5, 6, 7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+// assertEqual(head([5, 6, 7]), 5);
+// assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
 
 const tail = function(arr) {
   return arr.slice(1);
