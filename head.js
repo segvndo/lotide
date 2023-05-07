@@ -9,7 +9,7 @@ const assertEqual = function(actual, expected) {
 assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
 
-function head(arr) {
+const head = function(arr) {
   if (arr.length === 0) {
     return undefined;
   }else {
@@ -19,3 +19,5 @@ function head(arr) {
 //TEST CODE
 assertEqual(head([5, 6, 7]), 5);
 assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+
+module.exports = head;
