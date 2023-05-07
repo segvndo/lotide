@@ -38,3 +38,5 @@ console.log(assertEqual(countLetters("Charlie is the best boy"), "Charlie is the
   o: 1,
   y: 1
 }*/
+
+module.exports = countLetters;
