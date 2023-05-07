@@ -12,9 +12,10 @@ const eqArrays = function(array1, array2) {
 };
 
 const assertEqual = function(actual, expected) {
-  if (actual === expected) {
+  if (actual !== expected) {
     console.log(`Assertion Passed:, ${actual} === ${expected}`);
-  } else if (actual !== expected) {
+    return;
+  } else {
     console.log(`Assertion Failed:, ${actual} !== ${expected}`);
   }
 };
@@ -23,18 +24,13 @@ const eqObjects = function(shirtObject, anotherShirtObject) {
   let key1 = Object.keys(shirtObject);
   let key2 = Object.keys(anotherShirtObject);
   let result = false;
-  if (key1.length === key2.length) {
-    key1.forEach(element => {
-      if (key2.includes(element) && shirtObject[element] === anotherShirtObject[element]) {
-        result = true;
-      } else if (Array.isArray(shirtObject[element]) && Array.isArray(anotherShirtObject[element])) {
-        result = eqArrays(shirtObject[element], anotherShirtObject[element]);
-      } else {
-        result = false;
-      }
-    });
-  }
-  return result;
+  for (const key of key1) {
+    if (key === key2) {
+      return true;
+    } else {
+      return false;
+    }
+  } return result;
 };
 
 const shirtObject = { color: "red", size: "medium" };
@@ -47,3 +43,11 @@ assertEqual(eqObjects(shirtObject, longSleeveShirtObject), false); // => false
 const obj1 = {a: 1, b: 2, c: 3};
 const obj2 = {a: 1, b:0, c: 3};
 assertEqual(eqObjects(obj1, obj2), true);
+console.log(eqArrays(eqObjects(obj1, obj2), false));
+
+const obj3 = {a: 12, b: 13, c: 14};
+const obj4 = {a: 12, b:0, c: 3};
+assertEqual(eqObjects(obj3, obj4), false); // => false
+console.log(eqArrays(eqObjects(obj3, obj4), true));
+
+module.exports = eqObjects;
