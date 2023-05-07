@@ -1,8 +1,10 @@
+const countLetters = require("./countLetters");
+
 const eqArrays = function(array1, array2) {
-  if (array1 === array2) {
-    return false
+  if (array1 !== array2) {
+    return false;
   } else {
-    for(let i = 0; i < array1.length; i++) {
+    for (let i = 0; i < array1.length; i++) {
       if (array1[i] !== array2[i] || array1.length !== array2.length) {
         return false;
       }
@@ -34,5 +36,11 @@ const letterPositions = function(sentence) {
   }
   return results;
 };
-console.log(letterPositions("hello"));
 
+console.log(letterPositions("hello"));
+console.log(eqArrays(letterPositions("hello"), false))
+assertArraysEqual(letterPositions("hello").h, [3]);
+assertArraysEqual(letterPositions("hello").e, [2]);
+countLetters(letterPositions("Hello"));
+
+module.exports = letterPositions;
