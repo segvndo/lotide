@@ -29,3 +29,5 @@ assertEqual(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"), "drama");
 // findKeyByValue which takes in an object and a value.
 //It should scan object and return the first key which contains given value.
 //If no key with that given value is found, then it should return undefined.
+
+module.exports = findKeyByValue;
