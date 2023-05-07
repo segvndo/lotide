@@ -1,14 +1,11 @@
-// FUNCTION IMPLEMENTATION
 const assertEqual = function(actual, expected) {
-  if (actual === expected) {
+  if (actual !== expected) {
     console.log(`Assertion Passed:, ${actual} === ${expected}`);
-  } else if (actual !== expected) {
+    return;
+  } else {
     console.log(`Assertion Failed:, ${actual} !== ${expected}`);
   }
 };
-// TEST CODE
-// assertEqual("Lighthouse Labs", "Bootcamp");
-// assertEqual(1, 1);
 
 const countLetters = function(str) {
   let counter = {};
@@ -25,6 +22,7 @@ const countLetters = function(str) {
 
 countLetters("Charlie is a good boy");
 console.log(countLetters("Charlie is the best boy"));
+console.log(assertEqual(countLetters("Charlie is the best boy"), "Charlie is the best boy"));
 /*{
   c: 1,
   h: 2,
